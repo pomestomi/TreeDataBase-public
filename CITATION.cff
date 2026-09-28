@@ -1,0 +1,83 @@
+cff-version: 1.2.0
+message: >-
+  If you use this dataset or code, please cite it using the metadata below.
+  A data paper describing the dataset is under review; the reference will be
+  added here on publication.
+type: dataset
+title: "Urban Tree Soil Moisture Dataset (TreeDataBase)"
+abstract: >-
+  Georeferenced urban trees across Central European cities equipped with
+  IoT soil-moisture sensors at 10, 30 and 45 cm depth, with hourly gridded
+  weather data, hand-digitised land-use context at 2.5/5/7.5 m, topographic
+  indices, soil laboratory analyses, tree photographs, and derived rain- and
+  irrigation-event tables.
+version: 1.0.0
+date-released: 2026-09-28
+license: MIT
+license-url: https://opensource.org/licenses/MIT
+keywords:
+  - urban trees
+  - soil moisture
+  - IoT sensors
+  - capacitive soil sensors
+  - land use
+  - topographic wetness index
+  - irrigation
+  - rain events
+  - Central Europe
+authors:
+  - family-names: Maier
+    given-names: Thomas
+    email: thomas.maier@fau.de
+  - family-names: Dobkowitz
+    given-names: Sophia
+  - family-names: Meyer
+    given-names: Jan-Friedrich
+  - family-names: Beyer
+    given-names: Matthias
+  - family-names: Quambusch
+    given-names: Mona
+  - family-names: Fritsche
+    given-names: Ursula
+  - family-names: Shrirama
+    given-names: Puneetha D.
+  - family-names: Roy
+    given-names: Subhashmita
+  - family-names: Jami
+    given-names: Naga Venkata Sai Jitin
+  - family-names: Troles
+    given-names: Jonas
+  - family-names: Reinfelder
+    given-names: Thomas
+  - family-names: Dowidat
+    given-names: Josephine
+  - family-names: Kendzia
+    given-names: Nikolai
+  - family-names: Christianus
+    given-names: Pauline L.
+  - family-names: Strauß
+    given-names: Lennart
+  - family-names: Roth
+    given-names: Thomas
+  - family-names: Kodym
+    given-names: Andrea
+  - family-names: Skoggen
+    given-names: Krissa
+  - family-names: Schumacher
+    given-names: Frank
+  - family-names: Klaps
+    given-names: Marcel
+  - family-names: Pinski
+    given-names: Jan
+  - family-names: Scharsich
+    given-names: Kathrin
+  - family-names: Griessinger
+    given-names: Jussi
+  - family-names: Bräuning
+    given-names: Achim
+  - family-names: Eskofier
+    given-names: Björn M.
+contact:
+  - family-names: Maier
+    given-names: Thomas
+    email: thomas.maier@fau.de

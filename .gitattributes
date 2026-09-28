@@ -1,0 +1,43 @@
+# Line endings: normalise text to LF in the repository, keep data files exactly as committed.
+* text=auto eol=lf
+
+*.py    text eol=lf
+*.md    text eol=lf
+*.txt   text eol=lf
+*.csv   text eol=lf
+*.tsv   text eol=lf
+*.json  text eol=lf
+*.tex   text eol=lf
+*.cff   text eol=lf
+*.yaml  text eol=lf
+*.yml   text eol=lf
+*.qmd   text eol=lf
+*.qml   text eol=lf
+*.prj   text eol=lf
+*.cpg   text eol=lf
+*.xml   text eol=lf
+
+# Binary formats — never touch line endings, never diff as text.
+*.pdf   binary
+*.png   binary
+*.jpg   binary
+*.JPG   binary
+*.jpeg  binary
+*.pptx  binary
+*.xlsx  binary
+*.ipynb binary
+*.pkl   binary
+*.shp   binary
+*.shx   binary
+*.dbf   binary
+*.sbn   binary
+*.sbx   binary
+*.gpkg  binary
+*.tab   binary
+*.sdat  binary
+*.sgrd  binary
+*.mgrd  binary
+*.zip   binary
+*.tif   binary
+*.tfw   text eol=lf
+.params_hash_v4 text eol=lf

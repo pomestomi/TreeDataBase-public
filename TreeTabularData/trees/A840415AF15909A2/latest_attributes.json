@@ -1,0 +1,116 @@
+{
+  "REC|ENV__SOIL__IRRIGATION": {
+    "value": "0",
+    "ts": 1762190885310
+  },
+  "-10|ENV__SOIL__VWC__fc": {
+    "value": "[{\"ts\":1763256286663,\"value\":null},{\"ts\":1763342686663,\"value\":null},{\"ts\":1763429086663,\"value\":null},{\"ts\":1763515486663,\"value\":null},{\"ts\":1763601886663,\"value\":null},{\"ts\":1763688286663,\"value\":null},{\"ts\":1763774686663,\"value\":null}]",
+    "ts": 1763169886769
+  },
+  "latitude": {
+    "value": "52.38297779218186",
+    "ts": 1730708010725
+  },
+  "-45|ENV__SOIL__VWC__fc": {
+    "value": "[{\"ts\":1763256286663,\"value\":null},{\"ts\":1763342686663,\"value\":null},{\"ts\":1763429086663,\"value\":null},{\"ts\":1763515486663,\"value\":null},{\"ts\":1763601886663,\"value\":null},{\"ts\":1763688286663,\"value\":null},{\"ts\":1763774686663,\"value\":null}]",
+    "ts": 1763169886769
+  },
+  "-30|ENV__SOIL__VWC__fc": {
+    "value": "[{\"ts\":1763256286663,\"value\":null},{\"ts\":1763342686663,\"value\":null},{\"ts\":1763429086663,\"value\":null},{\"ts\":1763515486663,\"value\":null},{\"ts\":1763601886663,\"value\":null},{\"ts\":1763688286663,\"value\":null},{\"ts\":1763774686663,\"value\":null}]",
+    "ts": 1763169886769
+  },
+  "longitude": {
+    "value": "13.074761376161348",
+    "ts": 1730708010725
+  },
+  "-30|ENV__SOIL__VWC": {
+    "value": "22.51",
+    "ts": 1763313856477
+  },
+  "-10|ENV__SOIL__T": {
+    "value": "9.01",
+    "ts": 1763357044649
+  },
+  "DEVICE|DEV__RF__SINR": {
+    "value": "-5.2",
+    "ts": 1763357044649
+  },
+  "-30|ENV__SOIL__T": {
+    "value": "9.84",
+    "ts": 1763357044649
+  },
+  "DEVICE|DEV__RF__RSSI": {
+    "value": "-117",
+    "ts": 1763357044649
+  },
+  "MTB|ENV__ATMO__RAIN__DELTA": {
+    "value": "0",
+    "ts": 1788044400000
+  },
+  "MTB|ENV__ATMO__RH": {
+    "value": "62",
+    "ts": 1788044400000
+  },
+  "MTB|ENV__SOIL__VWC": {
+    "value": "0.18199999630451202",
+    "ts": 1788044400000
+  },
+  "MTB|ENV__SOIL__ET": {
+    "value": "0.019999999552965164",
+    "ts": 1788044400000
+  },
+  "MTB|ENV__ATMO__DEWPOINT": {
+    "value": "12.10708999633789",
+    "ts": 1788044400000
+  },
+  "MTB|ENV__ATMO__WIND__SPEED": {
+    "value": "7.56856632232666",
+    "ts": 1788044400000
+  },
+  "DEVICE|DEV__ENERGY__VBAT": {
+    "value": "3606",
+    "ts": 1763357044649
+  },
+  "MTB|ENV__ATMO__P": {
+    "value": "1011.4000244140625",
+    "ts": 1788044400000
+  },
+  "-45|ENV__SOIL__VWC": {
+    "value": "22.75",
+    "ts": 1763313856477
+  },
+  "-30|ENV__SOIL__CAPACITANCE__ABSOLUTE": {
+    "value": "289.95",
+    "ts": 1763313856477
+  },
+  "MTB|ENV__ATMO__T": {
+    "value": "19.584999084472656",
+    "ts": 1788044400000
+  },
+  "-10|ENV__SOIL__VWC": {
+    "value": "17",
+    "ts": 1763313856477
+  },
+  "-45|ENV__SOIL__T": {
+    "value": "9.77",
+    "ts": 1763357044649
+  },
+  "MTB|ENV__SOIL__T": {
+    "value": "20.03499984741211",
+    "ts": 1788044400000
+  },
+  "-10|ENV__SOIL__CAPACITANCE__ABSOLUTE": {
+    "value": "301.02",
+    "ts": 1763313856477
+  },
+  "-45|ENV__SOIL__CAPACITANCE__ABSOLUTE": {
+    "value": "285.18",
+    "ts": 1763313856477
+  },
+  "MTB|ENV__ATMO__WIND__DIRECTION": {
+    "value": "177.27374267578125",
+    "ts": 1788044400000
+  },
+  "_fetched_at": "2026-08-29 10:08:06",
+  "_entityId": "31b7c320-3ea4-11ef-b7fc-21f01d26b955"
+}

@@ -1,0 +1,39 @@
+location,id,station,elevation,MAP,summerP,MAT,T_cm,T_wm,source_p,source_t
+Augsburg,232,Augsburg,461.5,749.4,470.6,8.9,-0.1,18.3,45,51
+Bamberg,284,Bamberg (Sternwarte),282.0,722.2,385.6,9.2,0.4,18.6,46,46
+Berlin,399,Berlin-Alexanderplatz,35.8,580.1,320.8,10.7,1.5,20.4,46,46
+Biberach,474,Warthausen-Birkenhard,599.0,857.8,548.7,8.5,-0.3,17.9,46,46
+Bremen,691,Bremen,4.0,670.3,354.5,9.8,2.2,18.3,45,51
+Celle,848,Celle (Stadt),38.0,674.8,340.4,10.0,1.9,19.1,45,46
+Crailsheim,881,Crailsheim-Alexandersreut,423.0,783.0,395.0,9.2,0.4,18.6,43,46
+"Dresden, Pillnitz",1051,Dresden-Strehlen,119.0,554.0,316.0,10.3,1.1,19.8,43,42
+Elsdorf,1201,Elsdorf/Erftkreis,85.0,672.6,357.5,10.9,3.3,19.2,46,46
+Erfurt,1270,Erfurt-Weimar,316.0,534.7,339.1,9.0,0.3,18.4,45,51
+"Erlangen, Weisendorf, Effeltrich",1279,Möhrendorf-Kleinseebach,267.5,659.3,349.9,9.8,0.8,19.6,45,51
+Hagen,1920,Hagen-Fley,100.0,856.8,415.9,10.5,3.1,18.8,46,46
+"Garbsen, Hannover",2014,Hannover,55.2,626.7,325.8,10.0,2.1,18.7,45,51
+Heidelberg,2080,Heidelberg,110.0,696.9,371.1,11.6,2.8,20.8,46,46
+Homburg,2331,Homburg/Saar,235.0,797.1,372.0,10.0,1.9,19.0,45,46
+Kassel,2532,Kassel,231.0,683.8,358.6,9.5,1.1,18.4,46,46
+Leipzig,2928,Leipzig-Holzhausen,138.0,611.0,356.1,10.1,1.3,19.7,45,51
+Lüdenscheid,3098,Lüdenscheid,386.7,1091.2,486.1,8.9,1.1,17.1,45,44
+Neunkirchen,3545,Neunkirchen-Wellesweiler,236.0,858.0,383.0,10.1,2.0,18.9,43,42
+Nürnberg,3668,Nürnberg,313.8,600.5,343.3,9.8,0.7,19.5,45,51
+Pforzheim,3925,Pforzheim-Ispringen,332.0,831.0,424.0,9.9,1.5,19.1,43,42
+Pirmasens,3939,Pirmasens,385.0,912.0,422.0,9.5,1.3,18.2,43,42
+Plön,3955,Plön (See),24.0,709.3,371.4,9.3,1.8,17.7,46,46
+Potsdam,3987,Potsdam,80.9,577.6,325.8,9.7,0.7,19.4,45,51
+Saarbrücken,4339,Saarbrücken-Sankt Johann,193.0,815.2,376.6,10.9,2.6,19.9,46,46
+Lemgo,4371,"Salzuflen, Bad",134.6,799.1,402.4,9.9,2.1,18.3,45,51
+Hassfurt,6347,Schonungen-Mainberg,305.0,680.0,362.0,9.6,0.6,18.9,43,42
+Neumünster,7427,Padenstedt (Pony-Park),16.5,832.0,411.0,9.4,1.8,17.9,43,42
+Grünwald,7431,Oberhaching-Laufzorn,603.5,1101.0,690.0,8.6,-0.5,18.0,43,42
+Hildesheim,13776,Hildesheim-Drispenstedt,85.0,651.5,341.8,10.0,2.0,18.6,46,46
+Aachen,15000,Aachen-Orsbach,231.0,867.0,432.0,10.3,2.9,18.3,43,42
+"Greding, Ingolstadt",19781,Ingolstadt,367.0,696.5,408.0,9.3,-0.2,19.1,45,46
+Laax, ,Disentis,1197.0,1125.4,659.1,7.1,-1.1,15.8,MeteoSwiss OGD DIS (static fallback),MeteoSwiss OGD DIS (static fallback)
+Salzburg, ,Salzburg_Freisaal,419.0,1493.5,972.9,10.4,0.4,20.0,manual,manual
+Vienna, ,Wien_Innere_Stadt,177.0,669.2,421.3,12.6,2.1,23.0,manual,manual
+Wiener Neustadt, ,Wr.Neustadt_Flugh.,275.0,607.8,417.3,10.5,0.0,20.9,manual,manual
+Leogang, ,Saalbach,975.0,1227.1,779.8,6.1,-3.7,15.8,GeoSphere Austria (klima-v2-1m),GeoSphere Austria (klima-v2-1m)
+Riedingtal, ,Obertauern,1772.0,1071.4,781.5,2.9,-4.8,11.6,GeoSphere Austria (klima-v2-1m),GeoSphere Austria (klima-v2-1m)

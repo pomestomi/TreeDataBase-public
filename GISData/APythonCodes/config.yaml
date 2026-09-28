@@ -1,0 +1,200 @@
+bundeslaender:
+  bavaria:
+    crs: EPSG:25832
+    script: download_DSM_DEM_tiles_treebuffers
+    method: meta4
+    DEM:
+      meta4_path: dgm1.meta4
+    DSM:
+      meta4_path: dom20dom.meta4
+
+  berlin:
+    crs: EPSG:25833
+    script: download_DSM_DEM_wcs_treebuffers
+    wcs_version: 1.0.0
+    DEM:
+      wcs_url: https://isk.geobasis-bb.de/ows/dgm_wcs?
+    DSM:
+      wcs_url: https://isk.geobasis-bb.de/ows/bdom_wcs?
+
+  brandenburg:
+    crs: EPSG:25833
+    script: download_DSM_DEM_wcs_treebuffers
+    wcs_version: 1.0.0
+    DEM:
+      wcs_url: https://isk.geobasis-bb.de/ows/dgm_wcs?
+    DSM:
+      wcs_url:
+        https://isk.geobasis-bb.de/ows/bdom_wcs?
+
+  bremen:
+    crs: EPSG:25832
+    script: download_DSM_DEM_tiles_treebuffers
+    method: bremen_xyz_zip
+    DEM:
+      zip_url: https://gdi2.geo.bremen.de/inspire/download/DGM/data/Gitternetz_DGM1_2017_HB_ASCII_XYZ.zip
+    DSM:
+      zip_url: https://gdi2.geo.bremen.de/inspire/download/DOM/data/Gitternetz_DOM1_2017_HB_ASCII_XYZ.zip
+
+
+  bw:
+    crs: EPSG:25832
+    wcs_version: 2.0.1
+    method: bw_DSM_zip
+    DEM:
+      script: download_DSM_DEM_tiles_treebuffers
+      method: bw_xyz_subfolder
+    DSM:
+      script: download_DSM_DEM_tiles_treebuffers
+
+
+  hessen:
+    crs: EPSG:25832
+    script: download_DSM_DEM_wcs_treebuffers
+    wcs_version: 2.0.1
+    DEM:
+      wcs_url: https://inspire-hessen.de/raster/dgm1/ows?
+    DSM:
+      wcs_url: https://inspire-hessen.de/raster/dom1/ows?
+
+
+  nds:
+    crs: EPSG:25832
+    script: download_DSM_DEM_tiles_treebuffers
+    method: geojson_index
+    DEM:
+      tile_index_url: https://arcgis-geojson.s3.eu-de.cloud-object-storage.appdomain.cloud/dgm1/lgln-opengeodata-dgm1.geojson
+      row_name: dgm1
+    DSM:
+      tile_index_url: https://arcgis-geojson.s3.eu-de.cloud-object-storage.appdomain.cloud/dom1/lgln-opengeodata-dom1.geojson
+      row_name: dom1
+
+  nrw:
+    crs: EPSG:25832
+    script: download_DSM_DEM_tiles_treebuffers
+    method: wcs_tiles
+    DEM:
+      wcs_url: https://www.wcs.nrw.de/geobasis/wcs_nw_dgm
+      coverage_id: nw_dgm
+    DSM:
+      wcs_url: https://www.wcs.nrw.de/geobasis/wcs_nw_dom
+      coverage_id: nw_dom
+
+  rlp:
+    crs: EPSG:25832
+    script: download_DSM_DEM_tiles_treebuffers
+    method: meta4
+    DEM:
+      meta4_path: dgm1_tif_07.meta4
+    DSM:
+      meta4_path: dom1_tif_07.meta4
+
+  saarland:
+    crs: EPSG:25832
+    script: download_DSM_DEM_tiles_treebuffers
+    method: sl_zip
+    DEM:
+      zip_url: https://www.shop.lvgl.saarland.de/cloud/public.php/dav/files/NK8ndP55qAqGEZD/OD_DGM1_2025_tif_LK/DGM1_tif_{lk}_EPSG-25832_Entstehung-2025.zip
+    DSM:
+      zip_url: https://www.shop.lvgl.saarland.de/cloud/public.php/dav/files/NK8ndP55qAqGEZD/OD_DOM1_2025_tif_LK/DOM1_tif_{lk}_EPSG-25832_Entstehung-2025.zip
+
+
+  sachsen:
+    crs: EPSG:25833
+    script: download_DSM_DEM_tiles_treebuffers
+    method: sachsen_tiles
+    DEM:
+      url_file: dgm_index.txt
+    DSM:
+      url_file: dom_index.txt
+
+  sh:
+    crs: EPSG:25832
+    script: download_DSM_DEM_tiles_treebuffers
+    method: geojson_index
+    DEM:
+      tile_index_url: https://geodaten.schleswig-holstein.de/gaialight-sh/_apps/dladownload/single.php?file=DGM1_SH__Massendownload.geojson&id=4
+    DSM:
+      tile_index_url: https://geodaten.schleswig-holstein.de/gaialight-sh/_apps/dladownload/single.php?file=bDOM_SH_Massendownload.geojson&id=4
+
+  thueringen:
+    crs: EPSG:25832
+    script: download_DSM_DEM_tiles_treebuffers
+    method: atom_feed_th
+    DEM:
+      atom_url: https://geoportal.geoportal-th.de/dienste/atom_th_hoehendaten_dgm?type=dataset&amp;id=14418d25-fcd7-4a3f-99a9-e3059a2772af
+    DSM:
+       atom_url: https://geoportal.geoportal-th.de/dienste/atom_th_hoehendaten_dom?type=dataset&amp;id=3b5d8d9c-775d-4617-8dfe-71480d6472a6
+
+  vienna:
+    crs: EPSG:3035
+    script: download_DSM_DEM_austria_treebuffers
+    DEM:
+      atom_url: https://data.bev.gv.at/geonetwork/srv/atom/describe/service?uuid=208cff7a-c8aa-42fe-bf4f-2b8156e37528
+      g_name: als_dtm
+    DSM:
+      atom_url: https://data.bev.gv.at/geonetwork/srv/atom/describe/service?uuid=208cff7a-c8aa-42fe-bf4f-2b8156e37528
+      g_name: als_dsm
+
+  salzburg:
+    crs: EPSG:3035
+    script: download_DSM_DEM_austria_treebuffers
+    DEM:
+      atom_url: https://data.bev.gv.at/geonetwork/srv/atom/describe/service?uuid=208cff7a-c8aa-42fe-bf4f-2b8156e37528
+      g_name: als_dtm
+    DSM:
+      atom_url: https://data.bev.gv.at/geonetwork/srv/atom/describe/service?uuid=208cff7a-c8aa-42fe-bf4f-2b8156e37528
+      g_name: als_dsm
+
+#--------------------------------------------------------------------------------------------------------------------
+
+cities:
+  BotanicalGardenBremen: bremen
+  BotanicalGardenVienna: vienna
+  CastleAdminSaxony: sachsen
+  CityAachen: nrw
+  CityBamberg: bavaria
+  CityBerlinFrhXBerg: berlin
+  CityBerlinNeukölln: berlin
+  CityBiberach: bw
+  CityCrailsheim: bw
+  CityCelle: nds # tree metadata werden nachgereicht
+  CityErlangen: bavaria
+  CityGarbsen: nds
+  CityGrünwald: bavaria
+  CityHagen: nrw
+  CityHanover: nds
+  CityHassfurt: bavaria
+  CityHildesheim: nds
+  CityIngolstadt: bavaria
+#  CityKarben: hessen (Stauden)
+  CityKassel: hessen
+  CityLeipzig: sachsen
+  CityLemgo: nrw
+  CityLüdenscheid: nrw
+  CityNeunkirchen: saarland
+  CityNürnberg: bavaria
+#  CityOffenbach: hessen (Stauden)
+  CityPforzheim: bw
+  CityPirmasens: rlp
+  CityPotsdam: brandenburg
+  CityStein: bavaria
+  CityVienna: vienna
+  CityWeisendorf: bavaria
+  CompanyBremen: bremen
+  CompanyLaax: vienna
+  CompanyEffeltrich: bavaria
+  CompanyErfurt: thueringen
+  CompanyErlangen: bavaria
+  CompanyHeidelberg: bw
+  CompanyHomburg: saarland
+  CompanyNörvenich: nrw
+  CompanyPappenheim: bavaria
+  CompanyPillnitz: sachsen
+  CompanyPlön: sh
+  CompanySaarbrücken: saarland
+  CompanyVienna: vienna
+  UniversityErlangen: bavaria
+  UniversitySalzburg: salzburg
+
+exclude_eui: []

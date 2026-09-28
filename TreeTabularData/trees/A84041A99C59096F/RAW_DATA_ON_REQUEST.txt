@@ -1,0 +1,22 @@
+RAW DATA NOT INCLUDED
+=====================
+
+Tree / sensor : A84041A99C59096F
+Project       : CityPotsdam
+
+The raw sensor time series of this tree (sensor_data.csv) is not part of the
+public repository. For the deployments in Potsdam and Hagen the raw data is
+made available upon special request to the authors or curators of this
+dataset.
+
+The photographs of the Potsdam trees (three tree-appraisal campaigns and the
+soil-profile pictures) are likewise not part of the public repository and are
+available upon the same request.
+
+Contact: Thomas Maier, thomas.maier@fau.de
+
+The events derived from these measurements — classified rain events with
+their soil-moisture response and detected irrigation events — remain included
+in this folder (bsc_events/, Irrigation Events/) and in the aggregated tables
+TreeTabularData/bsc_events_all.csv, irrigation_events*.csv and rf_dataset.csv.
+The tree attributes (tree_data.json) are included as well.

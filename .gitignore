@@ -1,0 +1,38 @@
+# --- credentials -----------------------------------------------------------
+src/api_key.txt
+.env
+
+# --- Python / IDE / OS ---------------------------------------------------------
+__pycache__/
+*.pyc
+.venv/
+.vscode/
+.idea/
+.claude/
+.DS_Store
+Thumbs.db
+*.log
+
+# --- large re-downloadable terrain inputs (see GISData/APythonCodes) ----------
+GISData/**/*.tif
+GISData/**/tiles/
+GISData/*/DEM*/
+GISData/*/DSM/
+GISData/*/SVF/
+GISData/*/GW/
+
+# --- regenerable plots (scripts recreate them from the CSVs) -------------------
+TreeTabularData/trees/*/timeseries_plot.png
+TreeTabularData/trees/*/Irrigation Events/*.png
+TreeTabularData/trees/*/Irrigation Events v2/*.png
+TreeTabularData/trees/*/bsc_events/*.png
+
+# --- Natural Earth borders downloaded on first run of the map script -----------
+figures/data/
+
+# --- LaTeX / build leftovers ---------------------------------------------------
+*.aux
+*.out
+*.blg
+*.bbl
+*.synctex.gz

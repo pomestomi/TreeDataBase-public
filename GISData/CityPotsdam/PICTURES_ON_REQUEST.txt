@@ -1,0 +1,23 @@
+TREE PHOTOGRAPHS AND APPRAISAL DOCUMENTATION NOT INCLUDED
+=========================================================
+
+Project: City of Potsdam
+
+The photographs of the monitored Potsdam trees — three tree-appraisal
+campaigns (2024, June 2025, November 2025) and the soil-profile pictures of
+the Puerckhauer soil cores — together with the accompanying appraisal and
+soil documentation are not part of the public repository.
+
+This material is made available upon special request to the authors or
+curators of this dataset.
+
+Contact: Thomas Maier, thomas.maier@fau.de
+
+Pictures of the monitored trees in multiple seasons, for Potsdam and for the
+other deployments, are available on request as well.
+
+Included for these trees are: the sensor tree locations and the hand-digitised
+land-use layers (VectorLayers/), the tree attributes, and all events derived
+from the sensor measurements. The raw sensor time series of the Potsdam and
+Hagen trees are restricted in the same way — see
+TreeTabularData/trees/README_RESTRICTED_RAW_DATA.txt.

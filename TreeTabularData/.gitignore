@@ -1,0 +1,6 @@
+# Per-event irrigation/rain plot images — regenerate with the respective script
+**/Irrigation Events/rainEvent-*.png
+**/Irrigation Events v2/event-*.png
+
+# BSC example plots — regenerate with src/_poc_irrigation_v3.py
+**/bsc_events/bsc_example_*.png

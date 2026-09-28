@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SAGA_METADATA>
+  <DATABASE></DATABASE>
+  <SOURCE></SOURCE>
+  <HISTORY saga-version="9.8.1">
+    <TOOL library="ta_morphometry" id="18" name="Topographic Position Index (TPI)">
+      <OPTION type="grid_system" id="PARAMETERS_GRID_SYSTEM" name="Grid System">
+        <CELLSIZE>1</CELLSIZE>
+        <XMIN>644000.5</XMIN>
+        <YMIN>5492000.5</YMIN>
+        <XMAX>644999.5</XMAX>
+        <YMAX>5492999.5</YMAX>
+      </OPTION>
+      <OPTION type="boolean" id="STANDARD" name="Standardize">false</OPTION>
+      <OPTION type="range" id="RADIUS" name="Scale">0; 100</OPTION>
+      <OPTION type="choice" id="DW_WEIGHTING" name="Weighting Function" index="3">gaussian</OPTION>
+      <OPTION type="double" id="DW_BANDWIDTH" name="Bandwidth">75</OPTION>
+      <INPUT type="grid" id="DEM" name="Elevation" system="PARAMETERS_GRID_SYSTEM">
+        <TOOL library="io_gdal" id="0" name="Import Raster">
+          <OPTION type="file" id="FILES" name="Files">"C:/Users/tmaie/Documents/GitHub/TreeDataBase/UniversityErlangen/DEMErlangen/644_5492.tif"</OPTION>
+          <OPTION type="choice" id="MULTIPLE" name="Multiple Bands Output" index="2">automatic</OPTION>
+          <OPTION type="text" id="SUBSETS" name="Subsets"/>
+          <OPTION type="text" id="SELECTION" name="Select from Multiple Bands"/>
+          <OPTION type="boolean" id="TRANSFORM" name="Transformation">true</OPTION>
+          <OPTION type="choice" id="RESAMPLING" name="Resampling" index="3">B-Spline Interpolation</OPTION>
+          <OPTION type="choice" id="EXTENT" name="Extent" index="0">original</OPTION>
+          <OUTPUT type="grid_list" id="GRIDS" name="Grids">644_5492</OUTPUT>
+        </TOOL>
+      </INPUT>
+      <OUTPUT type="grid" id="TPI" name="Topographic Position Index">Topographic Position Index</OUTPUT>
+    </TOOL>
+  </HISTORY>
+  <FILE></FILE>
+  <DESCRIPTION></DESCRIPTION>
+  <PROJECTION>
+    <WKT2>PROJCRS["ETRS89 / UTM zone 32N",BASEGEODCRS["ETRS89",DATUM["European Terrestrial Reference System 1989",ELLIPSOID["GRS 1980",6378137,298.257222101,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]]],CONVERSION["UTM zone 32N",METHOD["Transverse Mercator",ID["EPSG",9807]],PARAMETER["Latitude of natural origin",0,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8801]],PARAMETER["Longitude of natural origin",9,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8802]],PARAMETER["Scale factor at natural origin",0.9996,SCALEUNIT["unity",1],ID["EPSG",8805]],PARAMETER["False easting",500000,LENGTHUNIT["metre",1],ID["EPSG",8806]],PARAMETER["False northing",0,LENGTHUNIT["metre",1],ID["EPSG",8807]]],CS[Cartesian,2],AXIS["easting",east,ORDER[1],LENGTHUNIT["metre",1]],AXIS["northing",north,ORDER[2],LENGTHUNIT["metre",1]],ID["EPSG",25832]]</WKT2>
+    <PROJ>+proj=utm +zone=32 +ellps=GRS80 +units=m +no_defs +type=crs</PROJ>
+    <CODE authority="EPSG">25832</CODE>
+  </PROJECTION>
+</SAGA_METADATA>

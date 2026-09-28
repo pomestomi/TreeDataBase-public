@@ -1,0 +1,146 @@
+# =============================================================================
+# BORUTA FEATURE SELECTION
+# =============================================================================
+# Edit the second column of each feature line:
+#   INCLUDE  → feature is a Boruta candidate
+#   EXCLUDE  → feature is never used
+#
+# Source tags (informational, do not edit):
+#   [BSC]  = only available in BSC rain-event data (rf_dataset.csv)
+#   [IRR]  = only available in irrigation data (irrigation_events_v2_all.csv)
+#   [BOTH] = present in both datasets
+#
+# Rain event features [BSC]: configurable here, but they are never used for
+#   irrigation models — those columns simply don't exist in irrigation data.
+#
+# Leakage columns (peak_vwc, t_peak_min, delta_pct_dyn, delta_vwc, dry_h,
+# temp_sum) are omitted — they are never eligible features.
+# Identifiers (eui, ev_start, ev_end, …) are also omitted.
+#
+# Depth-specific note: sensor stats (pre_vwc, dyn_range, avg_temp, vwc_p05,
+#   vwc_p95) at non-target depths are always excluded regardless of this file.
+#   This file controls whether the stat is used at the target depth at all.
+# =============================================================================
+
+# ── Sensor / per-depth statistics ──────────────────────────────────────
+avg_temp-10         INCLUDE   [BOTH]
+avg_temp-30         INCLUDE   [BOTH]
+avg_temp-45         INCLUDE   [BOTH]
+dyn_range-10        INCLUDE   [BOTH]
+dyn_range-30        INCLUDE   [BOTH]
+dyn_range-45        INCLUDE   [BOTH]
+pre_vwc-10          INCLUDE   [BOTH]
+pre_vwc-30          INCLUDE   [BOTH]
+pre_vwc-45          INCLUDE   [BOTH]
+vwc_p05-10          EXCLUDE   [BOTH]
+vwc_p05-30          EXCLUDE   [BOTH]
+vwc_p05-45          EXCLUDE   [BOTH]
+vwc_p95-10          EXCLUDE   [BOTH]
+vwc_p95-30          EXCLUDE   [BOTH]
+vwc_p95-45          EXCLUDE   [BOTH]
+
+# ── Rain event characteristics (BSC only — never used for irrigation) ──
+area_1              EXCLUDE   [BSC ]
+area_2              EXCLUDE   [BSC ]
+area_3              EXCLUDE   [BSC ]
+area_4              EXCLUDE   [BSC ]
+bsc_s1              EXCLUDE   [BSC ]
+bsc_s2              EXCLUDE   [BSC ]
+bsc_s3              EXCLUDE   [BSC ]
+bsc_s4              EXCLUDE   [BSC ]
+duration_h          EXCLUDE   [BSC ]
+huff_q              EXCLUDE   [BSC ]
+max_intensity_mmh   EXCLUDE   [BSC ]
+rain_post24h_mm     INCLUDE   [BOTH]
+rain_post72h_mm     INCLUDE   [BOTH]
+rain_pre24h_mm      INCLUDE   [BOTH]
+rain_pre72h_mm      INCLUDE   [BOTH]
+stac                EXCLUDE   [BSC ]
+total_mm            INCLUDE   [BSC ]
+
+# ── Seasonal encoding ───────────────────────────────────────────────────
+day_cos             INCLUDE   [BOTH]
+
+# ── Terrain (elevation, slope, SVF, DTGW, TPI, TWI) ────────────────────
+DTGW                INCLUDE   [IRR ]
+SVF                 INCLUDE   [BOTH]
+elevation           EXCLUDE   [BOTH]
+flowAcc             INCLUDE   [BOTH]
+slope               INCLUDE   [BOTH]
+tpiCD               EXCLUDE   [BOTH]
+tpi_2m5             EXCLUDE   [BOTH]
+tpi_5m              EXCLUDE   [BOTH]
+tpi_7m5             INCLUDE   [BOTH]
+twi                 INCLUDE   [BOTH]
+twi_2m5             EXCLUDE   [BOTH]
+twi_5m              EXCLUDE   [BOTH]
+twi_7m5             EXCLUDE   [BOTH]
+
+# ── Tree morphology (crownDiam, height, stemDiam, age) ───────────────────
+age_years           INCLUDE   [IRR ]
+crownDiam           INCLUDE   [BOTH]
+height              INCLUDE   [BOTH]
+latitude            EXCLUDE   [BSC ]
+longitude           EXCLUDE   [BSC ]
+stemDiam            INCLUDE   [BOTH]
+vitality            INCLUDE   [BSC ]
+
+# ── Soil chemistry & physical properties ────────────────────────────────
+Kf                  EXCLUDE   [BOTH]
+ammNSoluble         EXCLUDE   [IRR ]
+clSoluble           EXCLUDE   [BSC ]
+coarFrag            EXCLUDE   [IRR ]
+conductivity        EXCLUDE   [BOTH]
+dbd                 EXCLUDE   [BOTH]
+kSoluble            EXCLUDE   [IRR ]
+mgSoluble           EXCLUDE   [IRR ]
+nSoluble            EXCLUDE   [IRR ]
+nitrNSoluble        EXCLUDE   [IRR ]
+pF1.5               EXCLUDE   [IRR ]
+pF1.8               EXCLUDE   [IRR ]
+pF2.0               EXCLUDE   [IRR ]
+pF2.5               EXCLUDE   [IRR ]
+pF3.0               EXCLUDE   [IRR ]
+pF4.2               EXCLUDE   [IRR ]
+pH                  EXCLUDE   [IRR ]
+pHSoluble           EXCLUDE   [IRR ]
+part1Perc           EXCLUDE   [BOTH]
+part2Perc           EXCLUDE   [BOTH]
+part3Perc           EXCLUDE   [BOTH]
+part4Perc           EXCLUDE   [BOTH]
+part5Perc           EXCLUDE   [BSC ]
+part6Perc           EXCLUDE   [BSC ]
+part7Perc           EXCLUDE   [BSC ]
+saltContent         EXCLUDE   [IRR ]
+tpv                 EXCLUDE   [IRR ]
+
+# ── Land-use (green, buildings, sealed surfaces) ─────────────────────────
+buildingCD          EXCLUDE   [BOTH]
+buildings_0to5      EXCLUDE   [BOTH]
+buildings_0to7      EXCLUDE   [BOTH]
+buildings_2m5       EXCLUDE   [BOTH]
+buildings_5m        EXCLUDE   [BOTH]
+buildings_7m5       EXCLUDE   [BOTH]
+greenAttCD          EXCLUDE   [BOTH]
+greenAtta_0to5      EXCLUDE   [BOTH]
+greenAtta_0to7      INCLUDE   [BOTH]
+greenAtta_2m5       EXCLUDE   [BOTH]
+greenAtta_5m        EXCLUDE   [BOTH]
+greenAtta_7m5       EXCLUDE   [BOTH]
+greenDetCD          EXCLUDE   [BOTH]
+greenDeta_0to5      EXCLUDE   [BOTH]
+greenDeta_0to7      EXCLUDE   [BOTH]
+greenDeta_2m5       EXCLUDE   [BOTH]
+greenDeta_5m        EXCLUDE   [BOTH]
+greenDeta_7m5       EXCLUDE   [BOTH]
+green_0to5          EXCLUDE   [BOTH]
+green_0to7          EXCLUDE   [BOTH]
+green_2m5           EXCLUDE   [BOTH]
+green_5m            EXCLUDE   [BOTH]
+green_7m5           EXCLUDE   [BOTH]
+sealedSuCD          EXCLUDE   [BOTH]
+sealedSu_0to5       EXCLUDE   [BOTH]
+sealedSu_0to7       EXCLUDE   [BOTH]
+sealedSu_2m5        EXCLUDE   [BOTH]
+sealedSu_5m         EXCLUDE   [BOTH]
+sealedSu_7m5        EXCLUDE   [BOTH]

@@ -1,7 +1,7 @@
 # Urban Tree Soil Moisture Dataset (TreeDataBase)
 
 A georeferenced dataset of urban trees across Central European cities, each equipped
-with an IoT soil-moisture sensor from Agvolution's [Climavi](https://climavi.eu) system.
+with an IoT soil-moisture sensor from Agvolution's [climavi](https://climavi.eu) system.
 The dataset combines continuous sensor telemetry at three depths with hourly gridded
 weather data, tree-level attributes (species, morphology, vitality), hand-digitised
 land-use context, topographic indices and soil laboratory analyses, plus the derived
@@ -89,7 +89,7 @@ TreeDataBase/
 │   └── APythonCodes/                   # terrain, SVF, DEM download, groundwater scripts
 │
 ├── src/                                # data pipeline
-│   ├── fetch_timeseries.py             # Climavi API → sensor_data.csv (needs an API key)
+│   ├── fetch_timeseries.py             # climavi API → sensor_data.csv (needs an API key)
 │   ├── compute_landuse.py              # polygon layers → land-use fields
 │   ├── add_sensor_dates.py             # installation / removal dates
 │   ├── _poc_irrigation_v3.py           # BSC rain-event classifier
@@ -147,13 +147,13 @@ where the license allows, are available on request. See
 
 ### Sensor hardware
 
-Each monitored tree is equipped with a **Climavi Soil Underground** sensor unit
+Each monitored tree is equipped with a **climavi Soil Underground** sensor unit
 (Agvolution GmbH). The probe is installed vertically in the root zone and measures at
 three fixed depths (**10, 30 and 45 cm** below the surface), each with a capacitive
 moisture sensor and a temperature sensor. The housing also carries a dry-bulb and a
 wet-bulb thermometer near the soil surface.
 
-Sensors transmit via **LoRaWAN** or **NB-IoT / LTE-M** to the Climavi cloud platform
+Sensors transmit via **LoRaWAN** or **NB-IoT / LTE-M** to the climavi cloud platform
 (ThingsBoard-based), typically every 30 minutes. Each sensor is identified by its
 **devEUI**, which is the primary key linking every file in this repository.
 
@@ -275,7 +275,7 @@ pip install -r requirements.txt
 
 # 1  land use from the QGIS polygon layers        → treeLocations.shp fields
 python src/compute_landuse.py
-# 2  time series from the Climavi API (needs src/api_key.txt) → TreeTabularData/trees/*/sensor_data.csv
+# 2  time series from the climavi API (needs src/api_key.txt) → TreeTabularData/trees/*/sensor_data.csv
 python src/fetch_timeseries.py
 # 3  installation / removal dates
 python src/add_sensor_dates.py
@@ -294,7 +294,7 @@ python figures/generate_study_area_map.py         # study-area map (downloads Na
 python figures/make_paper_figures.py              # remaining manuscript figures
 ```
 
-The time-series fetcher requires a Climavi API key in `src/api_key.txt` (ignored by git);
+The time-series fetcher requires a climavi API key in `src/api_key.txt` (ignored by git);
 everything downstream of step 2 runs on the CSV files shipped in this repository. The
 terrain scripts (`GISData/APythonCodes/`) additionally need GDAL/rasterio and re-download
 the DEM/DSM tiles. Model training uses fixed seeds (`RF_SEED = 42`); the SHAP figures can be
@@ -340,7 +340,7 @@ Deployments range from 1 to 134 sensors per project.
 
 ## Accessing live sensor data
 
-The time series can also be browsed interactively on the Climavi platform at
+The time series can also be browsed interactively on the climavi platform at
 [https://app.climavi.eu](https://app.climavi.eu). The `devEUI` of each tree links the
 static attributes in this dataset to the live and historical data. REST API documentation:
 [https://app.climavi.eu/app/user/me/api-docs](https://app.climavi.eu/app/user/me/api-docs).
@@ -363,5 +363,5 @@ The paper reference will be added here on publication.
 
 ## Contact
 
-**Thomas Maier** - thomas.maier@fau.de
-Agvolution GmbH - [https://agvolution.com](https://agvolution.com) · Climavi platform - [https://climavi.eu](https://climavi.eu)
+**Thomas Maier** - thomas.maier@fau.de, t.maier@agvolution.com
+Friedrich-Alexander-Universität Erlangen-Nürnberg, Agvolution GmbH - [https://agvolution.com](https://agvolution.com) · climavi platform - [https://climavi.eu](https://climavi.eu)

@@ -7,7 +7,7 @@ weather data, tree-level attributes (species, morphology, vitality), hand-digiti
 land-use context, topographic indices and soil laboratory analyses, plus the derived
 rain- and irrigation-event tables and the Random-Forest / SHAP analyses built on them.
 
-**Snapshot in this repository:** 555 tree sites in 45 deployment projects (Germany,
+**Snapshot in this repository:** 555 tree sites in 41 deployment projects (Germany,
 Austria, Switzerland); sensor data from June 2022; 25 819 classified rain events
 (February 2024 – July 2026) at 510 trees; 3 355 detected irrigation events.
 

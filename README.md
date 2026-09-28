@@ -8,8 +8,9 @@ land-use context, topographic indices and soil laboratory analyses, plus the der
 rain- and irrigation-event tables and the Random-Forest / SHAP analyses built on them.
 
 **Snapshot in this repository:** 555 tree sites in 45 deployment projects (Germany,
-Austria, Switzerland); sensor data from June 2022; 25 819 classified rain events
-(February 2024 – July 2026) at 510 trees; 3 355 detected irrigation events.
+Austria, Switzerland); first sensor readings June 2022, the bulk of the network online
+from April 2023; 25 819 classified rain events (February 2024 – July 2026) at
+510 trees; 5 242 detected irrigation events at 379 trees.
 
 A data paper describing the dataset and the analyses is under review. Until it is
 published, please cite the repository via `CITATION.cff` (see [Citation](#citation)).
@@ -149,8 +150,11 @@ where the license allows, are available on request. See
 
 Each monitored tree is equipped with a **climavi Soil Underground** sensor unit
 (Agvolution GmbH). The probe is installed vertically in the root zone and measures at
-three fixed depths (**10, 30 and 45 cm** below the surface), each with a capacitive
-moisture sensor and a temperature sensor. The housing also carries a dry-bulb and a
+three fixed depths (**30, 60 and 90 cm** below the surface), each with a capacitive
+moisture sensor and a temperature sensor. Note that the *column names* in
+`sensor_data.csv` use the sensor's internal channel labels `-10`, `-30` and `-45`,
+which map to the physical depths 30, 60 and 90 cm respectively; the analysis scripts
+and all figures report the physical depths. The housing also carries a dry-bulb and a
 wet-bulb thermometer near the soil surface.
 
 Sensors transmit via **LoRaWAN** or **NB-IoT / LTE-M** to the climavi cloud platform
@@ -205,7 +209,8 @@ soluble nutrients, particle-size fractions and water-retention values (pF 1.5–
 `sensor_data.csv` holds up to 28 columns at 30-minute resolution. Not every parameter
 exists for every device (modular hardware, changing firmware).
 
-**Soil sensors** (depth −10, −30, −45 cm): `-{depth}|ENV__SOIL__VWC` (% volumetric water
+**Soil sensors** (channels `-10`, `-30`, `-45`, i.e. 30, 60 and 90 cm depth):
+`-{depth}|ENV__SOIL__VWC` (% volumetric water
 content), `-{depth}|ENV__SOIL__T` (°C), `-{depth}|ENV__SOIL__CAPACITANCE__ABSOLUTE` (raw).
 
 **On-device atmosphere:** `TOP|ENV__ATMO__T`, `TOP|ENV__ATMO__T__DRY`, `TOP|ENV__ATMO__T__WET` (°C).
@@ -257,7 +262,10 @@ site attributes. The 5 mm event-detection threshold is examined in
 
 **Irrigation events: `irrigation_events_all.csv`, `irrigation_events_v2_all.csv`.** A
 simultaneous VWC jump in at least two of the three depths, confirmed by a 2-hour persistence
-check and outside rain windows. Validation against 1 548 field-documented irrigation
+check and outside rain windows. `irrigation_events_v2_all.csv` holds **5 242 IRRIGATION
+events at 379 trees** (plus 1 161 IRRIGATION_STRONG); the older v4 detector in
+`irrigation_events_all.csv` is stricter and yields 3 355 events at 278 trees.
+Validation against 1 548 field-documented irrigation
 records at 121 trees: 1 336 assessable, recall 0.76, precision ≥ 0.31 (lower bound, since
 many detections are undocumented irrigation); `DatasetStatistics/validate_irrigation_detection.py`
 reproduces the validation.
